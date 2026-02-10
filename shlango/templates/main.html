@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Shlango{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'static/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'static/navbar.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'static/login.css' %}">
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <main class="page-content">
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>
